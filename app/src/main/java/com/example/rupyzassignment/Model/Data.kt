@@ -1,17 +1,31 @@
 package com.example.rupyzassignment.Model
 
-data class Data(
-    val author: String,
-    val blog_for: Any,
-    val category: String,
-    val created_at: String,
-    val label: Any,
-    val promotion_image_url: String,
-    val read_time: Int,
-    val slug: String,
-    val subtitle: String,
-    val tags: List<Any>,
-    val thumbnail_image_url: String,
-    val title: String,
-    val viewers_count: Int
+import com.google.gson.annotations.SerializedName
+
+data class Data( @SerializedName("author")
+                 val author: String,
+                 @SerializedName("content")
+                 val blog_for: Any,
+                 @SerializedName("category")
+                 val category: String,
+                 @SerializedName("created_at")
+                 val created_at: String,
+                 @SerializedName("label")
+                 val label: Any,
+                 @SerializedName("feature_image_url")
+                 val promotion_image_url: String,
+                 @SerializedName("thumbnail_image_url")
+                 val thumbnail_image_url: String,
+                 @SerializedName("read_time")
+                 val read_time: Int,
+                 @SerializedName("slug")
+                 val slug: String,
+                 @SerializedName("subtitle")
+                 val subtitle: String,
+                 @SerializedName("tags")
+                 val tags: List<Any>,
+                 @SerializedName("title")
+                 val title: String,
+                 @SerializedName("viewers_count")
+                 val viewers_count: Int
 )

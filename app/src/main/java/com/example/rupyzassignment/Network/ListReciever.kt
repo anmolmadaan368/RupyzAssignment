@@ -15,7 +15,7 @@ class ListReciever {
 
         val retrofit = Retrofit
             .Builder()
-            .baseUrl("https://documenter.getpostman.com/")
+            .baseUrl("http://devdeployed.rupyz.com:8080/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -29,7 +29,7 @@ class ListReciever {
 
     }
 
-    suspend fun getUsers(): List<ListResponse> {
+    suspend fun getUsers(): ListResponse{
         return networkInterface.getUsers()
     }
 }

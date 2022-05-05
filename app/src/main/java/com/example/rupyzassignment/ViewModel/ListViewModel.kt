@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class ListViewModel(private val listReciever: ListReciever):ViewModel() {
 
-    val m_response : MutableLiveData<List<ListResponse>> = MutableLiveData()
+    val m_response : MutableLiveData<ListResponse> = MutableLiveData()
 
     fun getUsers(){
 

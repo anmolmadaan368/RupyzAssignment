@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         listViewModel = ViewModelProvider(this,viewModelFactory)[ListViewModel::class.java]
         listViewModel.getUsers()
         listViewModel.m_response.observe(this, Observer {
-            recyclerViewAdapter.setUserData(it as ArrayList<Data>   )
+            recyclerViewAdapter.setUserData(it.data)
             recyclerView.visibility = View.VISIBLE
         })
 
